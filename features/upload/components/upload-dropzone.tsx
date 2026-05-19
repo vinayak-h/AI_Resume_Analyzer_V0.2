@@ -76,12 +76,22 @@ export function UploadDropzone({
         try {
 
           const response = await fetch(
-            "http://127.0.0.1:8000/parse-resume",
+            `${process.env.NEXT_PUBLIC_API_URL}/parse-resume`,
             {
               method: "POST",
               body: formData,
             }
           );
+
+          // HANDLE FAILED RESPONSE
+
+          if (!response.ok) {
+
+            throw new Error(
+              "Failed to analyze resume"
+            );
+
+          }
 
           const result =
             await response.json();
@@ -98,6 +108,10 @@ export function UploadDropzone({
           console.error(
             "Upload Error:",
             error
+          );
+
+          alert(
+            "Something went wrong while analyzing the resume."
           );
 
         } finally {
