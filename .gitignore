@@ -1,0 +1,74 @@
+# =========================================
+# NEXT.JS / REACT
+# =========================================
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# =========================================
+# PYTHON BACKEND
+# =========================================
+
+# virtual environment
+venv/
+env/
+
+# python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# uploaded resumes
+uploads/
+
+# =========================================
+# ENVIRONMENT VARIABLES
+# =========================================
+
+.env*
+.env.local
+
+# =========================================
+# VERCEL
+# =========================================
+
+.vercel
+
+# =========================================
+# DEBUG LOGS
+# =========================================
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# =========================================
+# SYSTEM FILES
+# =========================================
+
+.DS_Store
+Thumbs.db
+*.pem
